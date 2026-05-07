@@ -1,0 +1,177 @@
+2026-05-07 09:44:29 [Information] Aplicação iniciada
+2026-05-07 09:45:12 [Error] Erro capturado pelo ExceptionFilter
+Microsoft.Data.SqlClient.SqlException (0x80131904): Falha ao converter o varchar valor 'RECEBIDO' para o tipo de dados int.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteReaderAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteReaderAsync>b__283_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1242
+   at AutoAtedimento.API.Repositories.PedidoRepository.CriarPedido(PedidoModel pedido) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PedidoRepository.cs:line 48
+   at AutoAtedimento.API.Services.PedidoService.CriarPedido(PedidoModel pedido) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PedidoService.cs:line 22
+   at AutoAtedimento.API.Controllers.PedidoController.CriarPedido(PedidoModel model) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PedidoController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+ClientConnectionId:d4e31ea4-059c-4b60-8851-3fc77125e0fc
+Error Number:245,State:1,Class:16
+2026-05-07 09:45:13 [Error] HTTP "POST" "/api/Pedido/criar" responded 500 in 7589.0358 ms
+2026-05-07 09:46:31 [Error] Erro capturado pelo ExceptionFilter
+Microsoft.Data.SqlClient.SqlException (0x80131904): Falha ao converter o varchar valor 'RECEBIDO' para o tipo de dados int.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteReaderAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteReaderAsync>b__283_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1242
+   at AutoAtedimento.API.Repositories.PedidoRepository.CriarPedido(PedidoModel pedido) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PedidoRepository.cs:line 48
+   at AutoAtedimento.API.Services.PedidoService.CriarPedido(PedidoModel pedido) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PedidoService.cs:line 22
+   at AutoAtedimento.API.Controllers.PedidoController.CriarPedido(PedidoModel model) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PedidoController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+ClientConnectionId:d4e31ea4-059c-4b60-8851-3fc77125e0fc
+Error Number:245,State:1,Class:16
+2026-05-07 09:46:31 [Error] HTTP "POST" "/api/Pedido/criar" responded 500 in 36692.0901 ms
+2026-05-07 09:48:28 [Information] HTTP "POST" "/api/Pedido/criar" responded 200 in 89.6290 ms
+2026-05-07 09:48:36 [Error] Erro capturado pelo ExceptionFilter
+Microsoft.Data.SqlClient.SqlException (0x80131904): Falha ao converter o varchar valor 'EM_PREPARO' para o tipo de dados int.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1615
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in /_/Dapper/SqlMapper.Async.cs:line 944
+   at AutoAtedimento.API.Repositories.PedidoRepository.ListarPedidosCozinha()
+   at AutoAtedimento.API.Services.PedidoService.ListarPedidosCozinha()
+   at AutoAtedimento.API.Controllers.PedidoController.ListarCozinha()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+ClientConnectionId:d4e31ea4-059c-4b60-8851-3fc77125e0fc
+Error Number:245,State:1,Class:16
+2026-05-07 09:48:36 [Error] HTTP "GET" "/api/Pedido/cozinha" responded 500 in 368.6451 ms
+2026-05-07 09:53:20 [Information] Aplicação iniciada
+2026-05-07 09:53:28 [Information] HTTP "GET" "/api/Pedido/cozinha" responded 200 in 677.9557 ms
+2026-05-07 09:53:51 [Information] HTTP "GET" "/api/Pedido/10" responded 200 in 63.7670 ms
+2026-05-07 09:54:00 [Information] HTTP "GET" "/api/Pedido/7" responded 200 in 7.3662 ms
+2026-05-07 09:54:04 [Information] HTTP "GET" "/api/Pedido/1" responded 204 in 3.6294 ms
+2026-05-07 10:02:05 [Information] Aplicação iniciada
+2026-05-07 10:06:10 [Information] HTTP "PUT" "/api/Pedido/7/status" responded 200 in 510.8770 ms
+2026-05-07 10:06:19 [Information] HTTP "GET" "/api/Pedido/7" responded 200 in 22.9594 ms
+2026-05-07 10:06:42 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Pedido ainda não está pronto.
+   at AutoAtedimento.API.Repositories.PedidoRepository.FinalizarPedido(Int32 pedidoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PedidoRepository.cs:line 310
+   at AutoAtedimento.API.Services.PedidoService.FinalizarPedido(Int32 pedidoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PedidoService.cs:line 57
+   at AutoAtedimento.API.Controllers.PedidoController.Finalizar(Int32 id) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PedidoController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-07 10:06:42 [Information] HTTP "PUT" "/api/Pedido/7/finalizar" responded 400 in 356.5843 ms
+2026-05-07 10:06:58 [Information] HTTP "PUT" "/api/Pedido/7/status" responded 200 in 11.9107 ms
+2026-05-07 10:07:03 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Pedido ainda não está pronto.
+   at AutoAtedimento.API.Repositories.PedidoRepository.FinalizarPedido(Int32 pedidoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PedidoRepository.cs:line 310
+   at AutoAtedimento.API.Services.PedidoService.FinalizarPedido(Int32 pedidoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PedidoService.cs:line 57
+   at AutoAtedimento.API.Controllers.PedidoController.Finalizar(Int32 id) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PedidoController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-07 10:07:03 [Information] HTTP "PUT" "/api/Pedido/7/finalizar" responded 400 in 216.7616 ms
+2026-05-07 10:07:22 [Information] HTTP "GET" "/api/Pedido/7" responded 200 in 7.1517 ms
+2026-05-07 10:09:14 [Information] HTTP "PUT" "/api/Pedido/7/finalizar" responded 200 in 17.0595 ms
+2026-05-07 10:09:23 [Information] HTTP "GET" "/api/Pedido/7" responded 200 in 8.0654 ms
+2026-05-07 10:09:31 [Error] Erro capturado pelo ExceptionFilter
+Microsoft.Data.SqlClient.SqlException (0x80131904): Falha ao converter o varchar valor 'CANCELADO' para o tipo de dados int.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.Connection.SqlConnectionInternal.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader(Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<InternalExecuteNonQueryAsync>b__251_1(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 663
+   at AutoAtedimento.API.Repositories.PedidoRepository.CancelarPedido(Int32 pedidoId)
+   at AutoAtedimento.API.Services.PedidoService.CancelarPedido(Int32 pedidoId)
+   at AutoAtedimento.API.Controllers.PedidoController.Cancelar(Int32 id)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+ClientConnectionId:048a1820-4b99-4ccd-8743-6fefd2c090c6
+Error Number:245,State:1,Class:16
+2026-05-07 10:09:31 [Error] HTTP "PUT" "/api/Pedido/7/cancelar" responded 500 in 365.8362 ms
+2026-05-07 10:11:03 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Pedido já finalizado não pode ser cancelado.
+   at AutoAtedimento.API.Repositories.PedidoRepository.CancelarPedido(Int32 pedidoId)
+   at AutoAtedimento.API.Services.PedidoService.CancelarPedido(Int32 pedidoId)
+   at AutoAtedimento.API.Controllers.PedidoController.Cancelar(Int32 id)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-07 10:11:03 [Information] HTTP "PUT" "/api/Pedido/7/cancelar" responded 400 in 290.4963 ms
+2026-05-07 10:23:41 [Information] Aplicação iniciada
+2026-05-07 10:23:51 [Information] HTTP "GET" "/api/Pedido/7/total" responded 200 in 468.6097 ms
+2026-05-07 10:26:44 [Information] Aplicação iniciada
+2026-05-07 10:35:00 [Information] Aplicação iniciada
+2026-05-07 10:35:12 [Information] HTTP "GET" "/api/Produto" responded 200 in 420.8636 ms
+2026-05-07 10:38:29 [Information] HTTP "POST" "/api/Produto" responded 200 in 129.3002 ms
+2026-05-07 10:38:41 [Information] HTTP "GET" "/api/Produto/4" responded 200 in 22.9684 ms
+2026-05-07 10:53:22 [Information] Aplicação iniciada
+2026-05-07 11:10:08 [Information] Aplicação iniciada
+2026-05-07 11:11:08 [Information] HTTP "GET" "/api/Produto/1" responded 200 in 662.1462 ms

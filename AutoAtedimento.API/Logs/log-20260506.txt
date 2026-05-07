@@ -1,0 +1,122 @@
+2026-05-06 09:35:53 [Information] Aplicação iniciada
+2026-05-06 09:46:28 [Information] Aplicação iniciada
+2026-05-06 09:46:42 [Information] HTTP "GET" "/api/Pedido/cozinha" responded 200 in 1248.9716 ms
+2026-05-06 10:15:11 [Information] Aplicação iniciada
+2026-05-06 11:25:00 [Information] Aplicação iniciada
+2026-05-06 11:25:51 [Information] HTTP "GET" "/api/Pedido/1" responded 204 in 2009.0095 ms
+2026-05-06 11:26:07 [Information] HTTP "GET" "/api/Pedido/cozinha" responded 200 in 324.4386 ms
+2026-05-06 11:26:12 [Information] HTTP "GET" "/api/Pedido/4" responded 200 in 49.8515 ms
+2026-05-06 11:26:34 [Information] HTTP "GET" "/api/Pedido/5" responded 200 in 8.9618 ms
+2026-05-06 11:27:10 [Information] HTTP "GET" "/api/Pedido/4" responded 200 in 9.7493 ms
+2026-05-06 11:28:37 [Error] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Pedido/{id}" for actions - AutoAtedimento.API.Controllers.PedidoController.Obter (AutoAtedimento.API),AutoAtedimento.API.Controllers.PedidoController.ObterPedido (AutoAtedimento.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-06 11:29:25 [Information] Aplicação iniciada
+2026-05-06 11:40:23 [Error] Erro capturado pelo ExceptionFilter
+System.Exception: Pedido não encontrado.
+   at AutoAtedimento.API.Repositories.PedidoRepository.FinalizarPedido(Int32 pedidoId)
+   at AutoAtedimento.API.Services.PedidoService.FinalizarPedido(Int32 pedidoId)
+   at AutoAtedimento.API.Controllers.PedidoController.Finalizar(Int32 id)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-06 11:40:23 [Error] HTTP "PUT" "/api/Pedido/2/finalizar" responded 500 in 903.3436 ms
+2026-05-06 11:40:58 [Error] Erro capturado pelo ExceptionFilter
+System.Exception: Pedido não encontrado.
+   at AutoAtedimento.API.Repositories.PedidoRepository.FinalizarPedido(Int32 pedidoId)
+   at AutoAtedimento.API.Services.PedidoService.FinalizarPedido(Int32 pedidoId)
+   at AutoAtedimento.API.Controllers.PedidoController.Finalizar(Int32 id)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-06 11:40:58 [Error] HTTP "PUT" "/api/Pedido/2/finalizar" responded 500 in 23924.8054 ms
+2026-05-06 11:41:36 [Information] Aplicação iniciada
+2026-05-06 11:50:30 [Information] Aplicação iniciada
+2026-05-06 11:50:55 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Pedido ainda não está pronto.
+   at AutoAtedimento.API.Repositories.PedidoRepository.FinalizarPedido(Int32 pedidoId)
+   at AutoAtedimento.API.Services.PedidoService.FinalizarPedido(Int32 pedidoId)
+   at AutoAtedimento.API.Controllers.PedidoController.Finalizar(Int32 id)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-06 11:50:55 [Information] HTTP "PUT" "/api/Pedido/5/finalizar" responded 400 in 7456.5437 ms
+2026-05-06 13:07:14 [Information] Aplicação iniciada
+2026-05-06 13:08:01 [Information] HTTP "POST" "/api/Pedido/criar" responded 200 in 1391.0204 ms
+2026-05-06 13:08:19 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Pedido ainda não está pronto.
+   at AutoAtedimento.API.Repositories.PedidoRepository.FinalizarPedido(Int32 pedidoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PedidoRepository.cs:line 230
+   at AutoAtedimento.API.Services.PedidoService.FinalizarPedido(Int32 pedidoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PedidoService.cs:line 51
+   at AutoAtedimento.API.Controllers.PedidoController.Finalizar(Int32 id) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PedidoController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-06 13:08:19 [Information] HTTP "PUT" "/api/Pedido/7/finalizar" responded 400 in 643.3635 ms
+2026-05-06 13:08:31 [Information] HTTP "GET" "/api/Pedido/7" responded 200 in 43.8261 ms
+2026-05-06 13:24:15 [Error] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Pedido/{id}" for actions - AutoAtedimento.API.Controllers.PedidoController.ObterPedido (AutoAtedimento.API),AutoAtedimento.API.Controllers.PedidoController.ObterPedidoPorMesa (AutoAtedimento.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-06 13:24:43 [Information] Aplicação iniciada
+2026-05-06 13:24:46 [Error] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Pedido/{id}" for actions - AutoAtedimento.API.Controllers.PedidoController.ObterPedido (AutoAtedimento.API),AutoAtedimento.API.Controllers.PedidoController.ObterPedidoPorMesa (AutoAtedimento.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-06 13:25:46 [Information] Aplicação iniciada
+2026-05-06 13:25:47 [Error] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Pedido/{id}" for actions - AutoAtedimento.API.Controllers.PedidoController.ObterPedido (AutoAtedimento.API),AutoAtedimento.API.Controllers.PedidoController.ObterPedidoPorMesa (AutoAtedimento.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-06 13:28:01 [Information] Aplicação iniciada
+2026-05-06 13:29:13 [Information] Aplicação iniciada
+2026-05-06 13:29:16 [Error] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Pedido/{id}" for actions - AutoAtedimento.API.Controllers.PedidoController.ObterPedido (AutoAtedimento.API),AutoAtedimento.API.Controllers.PedidoController.ObterPedidoPorMesa (AutoAtedimento.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-06 13:30:57 [Information] Aplicação iniciada
+2026-05-06 13:46:18 [Information] Aplicação iniciada
+2026-05-06 13:46:32 [Information] HTTP "GET" "/api/Pedido/cozinha" responded 200 in 1007.2128 ms
+2026-05-06 13:46:45 [Information] HTTP "PUT" "/api/Pedido/4/cancelar" responded 200 in 150.9572 ms
+2026-05-06 13:46:57 [Information] HTTP "GET" "/api/Pedido/cozinha" responded 200 in 7.6605 ms
