@@ -7,9 +7,13 @@ namespace AutoAtedimento.API.Validator
     {
         public PedidoValidator()
         {
-            RuleFor(x => x.Ped_MesaId)
-                .NotEmpty().WithMessage("A mesa é obrigatória.")
-                .GreaterThan(0).WithMessage("Mesa inválida.");
+            //RuleFor(x => x.Ped_MesaId)
+            //    .NotEmpty().WithMessage("A mesa é obrigatória.")
+            //    .GreaterThan(0).WithMessage("Mesa inválida.");
+
+            RuleFor(x => x.Ped_SessaoId)
+                .GreaterThan(0)
+                .WithMessage("Sessão inválida.");
 
             RuleFor(x => x.Itens)
                 .NotNull().WithMessage("O pedido deve conter itens.")

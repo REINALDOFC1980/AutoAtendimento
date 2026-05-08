@@ -22,52 +22,70 @@ namespace AutoAtedimento.API.Repositories
         public async Task<int> CriarPedido(PedidoModel pedido)
         {
             using var connection = _db.CreateConnection();
+
+
             using var transaction = connection.BeginTransaction();
 
             try
             {
-                var mesaExiste = await connection.ExecuteScalarAsync<int>(
-                    @"SELECT COUNT(1) 
-                          FROM Mesa 
-                          WHERE Mes_Id = @MesaId",
-                    new { MesaId = pedido.Ped_MesaId },
-                    transaction
-                );
-
-                if (mesaExiste == 0)
-                    throw new BusinessException("Mesa não encontrada.");
-
-                var sqlPedido = @"
-                        INSERT INTO Pedido
-                        (
-                            Ped_MesaId,
-                            Ped_Status,
-                            Ped_DataHora,
-                            Ped_Observacao
-                        )
-                        VALUES
-                        (
-                            @MesaId,
-                            @Status,
-                            GETDATE(),
-                            @Observacao
-                        );
-
-                        SELECT CAST(SCOPE_IDENTITY() AS INT);
-                        ";
-
-                var pedidoId = await connection.ExecuteScalarAsync<int>(
-                    sqlPedido,
+                var sessao = await connection.QueryFirstOrDefaultAsync<dynamic>(
+                    @"
+                    SELECT
+                        s.Ses_Id,
+                        s.Ses_Status,
+                        s.Ses_MesaId
+                    FROM MesaSessao s
+                    WHERE s.Ses_Id = @SessaoId
+                    ",
                     new
                     {
-                        MesaId = pedido.Ped_MesaId,
-                        Status = (int)StatusPedido.Recebido,
-                        Observacao = pedido.Ped_Observacao
+                        SessaoId = pedido.Ped_SessaoId
                     },
                     transaction
                 );
 
-                foreach (var item in pedido.Itens)
+                if (sessao == null)
+                    throw new NotFoundException("Sessão não encontrada.");
+
+                if (sessao.Ses_Status != 1)
+                    throw new BusinessException("Sessão encerrada.");
+
+                var mesaId = (int)sessao.Ses_MesaId;
+
+                var sqlPedido = @"
+                                INSERT INTO Pedido
+                                (
+                                    Ped_MesaId,
+                                    Ped_SessaoId,
+                                    Ped_Status,
+                                    Ped_DataHora,
+                                    Ped_Observacao
+                                )
+                                VALUES
+                                (
+                                    @MesaId,
+                                    @SessaoId,
+                                    @Status,
+                                    GETDATE(),
+                                    @Observacao
+                                );
+
+                                SELECT CAST(SCOPE_IDENTITY() AS INT);
+                        ";
+
+                      var pedidoId = await connection.ExecuteScalarAsync<int>(
+                            sqlPedido,
+                            new
+                            {
+                                MesaId = mesaId,
+                                SessaoId = pedido.Ped_SessaoId,
+                                Status = (int)StatusPedido.Recebido,
+                                Observacao = pedido.Ped_Observacao
+                            },
+                            transaction
+                        );
+
+                      foreach (var item in pedido.Itens)
                 {
                     var produtoExiste = await connection.ExecuteScalarAsync<int>(
                         @"SELECT COUNT(1)

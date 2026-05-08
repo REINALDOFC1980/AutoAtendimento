@@ -130,6 +130,185 @@
         }
       }
     },
+    "/api/Mesa": {
+      "get": {
+        "tags": [
+          "Mesa"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Mesa"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MesaModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MesaModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MesaModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Mesa/{id}": {
+      "delete": {
+        "tags": [
+          "Mesa"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Mesa/{id}/qrcode": {
+      "get": {
+        "tags": [
+          "Mesa"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/mesa-sessao/{mesaId}/abrir": {
+      "post": {
+        "tags": [
+          "MesaSessao"
+        ],
+        "parameters": [
+          {
+            "name": "mesaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/mesa-sessao/{sessaoId}/fechar": {
+      "put": {
+        "tags": [
+          "MesaSessao"
+        ],
+        "parameters": [
+          {
+            "name": "sessaoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pagamento/{sessaoId}/pix": {
+      "post": {
+        "tags": [
+          "Pagamento"
+        ],
+        "parameters": [
+          {
+            "name": "sessaoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pagamento/{pagamentoId}/confirmar": {
+      "put": {
+        "tags": [
+          "Pagamento"
+        ],
+        "parameters": [
+          {
+            "name": "pagamentoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Pedido/criar": {
       "post": {
         "tags": [
@@ -431,6 +610,49 @@
           }
         }
       }
+    },
+    "/api/Produto/{id}/imagem": {
+      "post": {
+        "tags": [
+          "Produto"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "arquivo": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "arquivo": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -461,6 +683,27 @@
         },
         "additionalProperties": false
       },
+      "MesaModel": {
+        "type": "object",
+        "properties": {
+          "mes_Id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mes_Numero": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mes_Descricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "mes_Ativa": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "PedidoItemModel": {
         "type": "object",
         "properties": {
@@ -478,7 +721,7 @@
       "PedidoModel": {
         "type": "object",
         "properties": {
-          "ped_MesaId": {
+          "ped_SessaoId": {
             "type": "integer",
             "format": "int32"
           },

@@ -37,17 +37,25 @@ builder.Services.AddScoped<ProdutoService>();
 builder.Services.AddScoped<CategoriaRepository>();
 builder.Services.AddScoped<CategoriaService>();
 
+builder.Services.AddScoped<MesaRepository>();
+builder.Services.AddScoped<MesaService>();
+
+builder.Services.AddScoped<MesaSessaoRepository>();
+builder.Services.AddScoped<MesaSessaoService>();
+
+builder.Services.AddScoped<PagamentoRepository>();
+builder.Services.AddScoped<PagamentoService>();
+
 
 builder.Services.AddSignalR();
 
-// 🎯 Controllers + Filtro
+
 // 🎯 Controllers + Filtro
 builder.Services.AddScoped<ExceptionFilter>(); // 🔥 ADICIONAR ISSO
 
 builder.Services.AddControllers(options =>
 {
     options.Filters.Add<ExceptionFilter>();
-
 
 });
 

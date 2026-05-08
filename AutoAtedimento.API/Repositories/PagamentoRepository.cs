@@ -1,0 +1,197 @@
+﻿using AutoAtedimento.API.Data;
+using AutoAtedimento.API.DTO;
+using AutoAtedimento.API.DTO.AutoAtedimento.API.DTO;
+using AutoAtedimento.API.ENUM;
+
+using AutoAtedimento.API.Exceptions;
+using Dapper;
+
+namespace AutoAtedimento.API.Repositories
+{
+    public class PagamentoRepository
+    {
+        private readonly DbSession _db;
+
+        public PagamentoRepository(DbSession db)
+        {
+            _db = db;
+        }
+
+        public async Task<PagamentoDTO> GerarPix(int sessaoId)
+        {
+            using var connection = _db.CreateConnection();
+
+            // 🔥 VALIDAR SESSÃO
+            var sessao = await connection.QueryFirstOrDefaultAsync<dynamic>(
+                @"
+                SELECT
+                    Ses_Id,
+                    Ses_Status
+                FROM MesaSessao
+                WHERE Ses_Id = @SessaoId
+                ",
+                new { SessaoId = sessaoId });
+
+            if (sessao == null)
+                throw new NotFoundException("Sessão não encontrada.");
+
+            if (sessao.Ses_Status != 1)
+                throw new BusinessException("Sessão já encerrada.");
+
+            // 🔥 VALIDAR PAGAMENTO PENDENTE
+            var pagamentoPendente =
+                await connection.ExecuteScalarAsync<int>(
+                    @"
+                    SELECT COUNT(1)
+                    FROM Pagamento
+                    WHERE Pag_SessaoId = @SessaoId
+                    AND Pag_Status = 1
+                    ",
+                    new { SessaoId = sessaoId });
+
+            if (pagamentoPendente > 0)
+                throw new BusinessException(
+                    "Já existe pagamento pendente para esta sessão.");
+
+            // 🔥 CALCULAR TOTAL
+            var total = await connection.ExecuteScalarAsync<decimal>(
+                @"
+                SELECT ISNULL(SUM(
+                    i.It_Quantidade * i.It_PrecoUnitario
+                ),0)
+                FROM PedidoItem i
+                INNER JOIN Pedido p
+                    ON p.Ped_Id = i.It_PedidoId
+                WHERE p.Ped_SessaoId = @SessaoId
+                AND p.Ped_Status = 4
+                ",
+                new { SessaoId = sessaoId });
+
+            if (total <= 0)
+                throw new BusinessException(
+                    "Sessão sem valor para pagamento.");
+
+            // 🔥 MOCK PIX
+            var txid = Guid.NewGuid().ToString("N");
+
+            var copiaECola =
+                $"PIX-MOCK-{txid}";
+
+            var qrCode =
+                $"https://api.qrserver.com/v1/create-qr-code/?size=300x300&data={copiaECola}";
+
+            // 🔥 INSERT PAGAMENTO
+            var pagamentoId = await connection.ExecuteScalarAsync<int>(
+                @"
+                INSERT INTO Pagamento
+                (
+                    Pag_SessaoId,
+                    Pag_Valor,
+                    Pag_Status,
+                    Pag_TXID,
+                    Pag_QrCode,
+                    Pag_CopiaECola
+                )
+                VALUES
+                (
+                    @SessaoId,
+                    @Valor,
+                    @Status,
+                    @TXID,
+                    @QrCode,
+                    @CopiaECola
+                );
+
+                SELECT CAST(SCOPE_IDENTITY() AS INT);
+                ",
+                new
+                {
+                    SessaoId = sessaoId,
+                    Valor = total,
+                    Status = (int)StatusPagamento.Pendente,
+                    TXID = txid,
+                    QrCode = qrCode,
+                    CopiaECola = copiaECola
+                });
+
+            return new PagamentoDTO
+            {
+                PagamentoId = pagamentoId,
+                SessaoId = sessaoId,
+                Valor = total,
+                Status = (int)StatusPagamento.Pendente,
+                TXID = txid,
+                QrCode = qrCode,
+                CopiaECola = copiaECola,
+                DataCriacao = DateTime.Now
+            };
+        }
+
+
+        public async Task ConfirmarPagamento(int pagamentoId)
+        {
+            using var connection = _db.CreateConnection();
+
+            // 🔥 BUSCAR PAGAMENTO
+            var pagamento = await connection.QueryFirstOrDefaultAsync<dynamic>(
+                @"
+                SELECT
+                      Pag_Id,
+                     Pag_SessaoId,
+                     Pag_Status
+                FROM Pagamento
+                WHERE Pag_Id = @PagamentoId
+                ",
+                new { PagamentoId = pagamentoId });
+
+            if (pagamento == null)
+                throw new NotFoundException("Pagamento não encontrado.");
+
+            if (pagamento.Pag_Status == 2)
+                throw new BusinessException("Pagamento já confirmado.");
+
+            // 🔥 VALIDAR PEDIDOS PENDENTES
+            var pedidosPendentes =
+                await connection.ExecuteScalarAsync<int>(
+                    @"
+                    SELECT COUNT(1)
+                    FROM Pedido
+                    WHERE Ped_SessaoId = @SessaoId
+                    AND Ped_Status IN (1,2,3)
+                    ",
+                    new
+                    {
+                        SessaoId = pagamento.Pag_SessaoId
+                    });
+
+            if (pedidosPendentes > 0)
+                throw new BusinessException(
+                    "Ainda existem pedidos pendentes.");
+
+            // 🔥 CONFIRMAR PAGAMENTO
+            await connection.ExecuteAsync(
+                @"
+                UPDATE Pagamento
+                SET
+                    Pag_Status = 2,
+                    Pag_DataPagamento = GETDATE()
+                WHERE Pag_Id = @PagamentoId
+                ",
+                new { PagamentoId = pagamentoId });
+
+            // 🔥 FECHAR SESSÃO
+            await connection.ExecuteAsync(
+                @"
+                UPDATE MesaSessao
+                SET
+                    Ses_Status = 2,
+                    Ses_DataFechamento = GETDATE()
+                WHERE Ses_Id = @SessaoId
+                ",
+                new
+                {
+                    SessaoId = pagamento.Pag_SessaoId
+                });
+        }
+    }
+}

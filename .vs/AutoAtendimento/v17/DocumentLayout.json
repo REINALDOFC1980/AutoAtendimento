@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\dto\\produtodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\dto\\produtodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,71 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 72,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Program.cs",
-              "RelativeDocumentMoniker": "AutoAtedimento.API\\Program.cs",
-              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Program.cs",
-              "RelativeToolTip": "AutoAtedimento.API\\Program.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAE4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T14:13:23.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProdutoDTO.cs",
-              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\DTO\\ProdutoDTO.cs",
-              "RelativeDocumentMoniker": "AutoAtedimento.API\\DTO\\ProdutoDTO.cs",
-              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\DTO\\ProdutoDTO.cs",
-              "RelativeToolTip": "AutoAtedimento.API\\DTO\\ProdutoDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T14:13:45.187Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProdutoRepository.cs",
-              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Repositories\\ProdutoRepository.cs",
-              "RelativeDocumentMoniker": "AutoAtedimento.API\\Repositories\\ProdutoRepository.cs",
-              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Repositories\\ProdutoRepository.cs",
-              "RelativeToolTip": "AutoAtedimento.API\\Repositories\\ProdutoRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAhwKYAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T14:18:59.879Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProdutoService.cs",
-              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Services\\ProdutoService.cs",
-              "RelativeDocumentMoniker": "AutoAtedimento.API\\Services\\ProdutoService.cs",
-              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Services\\ProdutoService.cs",
-              "RelativeToolTip": "AutoAtedimento.API\\Services\\ProdutoService.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAIAwwCoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T14:20:46.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProdutoController.cs",
-              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\ProdutoController.cs",
-              "RelativeDocumentMoniker": "AutoAtedimento.API\\Controllers\\ProdutoController.cs",
-              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\ProdutoController.cs",
-              "RelativeToolTip": "AutoAtedimento.API\\Controllers\\ProdutoController.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAA2wHAAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T14:20:58.999Z"
             }
           ]
         }

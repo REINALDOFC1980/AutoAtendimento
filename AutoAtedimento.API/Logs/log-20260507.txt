@@ -175,3 +175,6 @@ AutoAtedimento.API.Exceptions.BusinessException: Pedido já finalizado não pode
 2026-05-07 10:53:22 [Information] Aplicação iniciada
 2026-05-07 11:10:08 [Information] Aplicação iniciada
 2026-05-07 11:11:08 [Information] HTTP "GET" "/api/Produto/1" responded 200 in 662.1462 ms
+2026-05-07 11:46:29 [Information] Aplicação iniciada
+2026-05-07 11:46:46 [Information] HTTP "GET" "/api/Mesa/1/qrcode" responded 200 in 138.3072 ms
+2026-05-07 11:47:23 [Information] HTTP "GET" "/api/Mesa/2/qrcode" responded 200 in 22.1424 ms

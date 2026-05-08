@@ -79,6 +79,128 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AutoAtedimento.API.Controllers.MesaController",
+    "Method": "Listar",
+    "RelativePath": "api/Mesa",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutoAtedimento.API.Controllers.MesaController",
+    "Method": "Criar",
+    "RelativePath": "api/Mesa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "AutoAtedimento.API.Models.MesaModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutoAtedimento.API.Controllers.MesaSessaoController",
+    "Method": "AbrirSessao",
+    "RelativePath": "api/mesa-sessao/{mesaId}/abrir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mesaId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutoAtedimento.API.Controllers.MesaSessaoController",
+    "Method": "FecharSessao",
+    "RelativePath": "api/mesa-sessao/{sessaoId}/fechar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sessaoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutoAtedimento.API.Controllers.MesaController",
+    "Method": "Inativar",
+    "RelativePath": "api/Mesa/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutoAtedimento.API.Controllers.MesaController",
+    "Method": "GerarQRCode",
+    "RelativePath": "api/Mesa/{id}/qrcode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutoAtedimento.API.Controllers.PagamentoController",
+    "Method": "ConfirmarPagamento",
+    "RelativePath": "api/pagamento/{pagamentoId}/confirmar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pagamentoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutoAtedimento.API.Controllers.PagamentoController",
+    "Method": "GerarPix",
+    "RelativePath": "api/pagamento/{sessaoId}/pix",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sessaoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AutoAtedimento.API.Controllers.PedidoController",
     "Method": "ObterPedido",
     "RelativePath": "api/Pedido/{id}",
@@ -264,6 +386,27 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutoAtedimento.API.Controllers.ProdutoController",
+    "Method": "UploadImagem",
+    "RelativePath": "api/Produto/{id}/imagem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "arquivo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

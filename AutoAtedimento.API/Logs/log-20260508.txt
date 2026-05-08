@@ -1,0 +1,230 @@
+2026-05-08 08:23:58 [Information] Aplicação iniciada
+2026-05-08 08:24:18 [Information] HTTP "GET" "/api/Mesa" responded 200 in 390.8707 ms
+2026-05-08 08:24:23 [Information] HTTP "GET" "/api/Mesa/4/qrcode" responded 200 in 93.1758 ms
+2026-05-08 08:25:47 [Information] HTTP "GET" "/api/Mesa/4/qrcode" responded 200 in 21.5942 ms
+2026-05-08 08:33:47 [Information] Aplicação iniciada
+2026-05-08 09:12:48 [Information] Aplicação iniciada
+2026-05-08 09:13:15 [Information] HTTP "POST" "/api/mesa-sessao/1/abrir" responded 200 in 1763.2825 ms
+2026-05-08 09:20:15 [Information] Aplicação iniciada
+2026-05-08 09:27:54 [Information] HTTP "GET" "/api/Mesa" responded 200 in 423.1331 ms
+2026-05-08 09:39:56 [Information] Aplicação iniciada
+2026-05-08 09:40:13 [Error] Erro capturado pelo ExceptionFilter
+System.InvalidOperationException: A conexão não foi fechada. O estado atual da conexão é aberta.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, SqlConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at AutoAtedimento.API.Repositories.PedidoRepository.CriarPedido(PedidoModel pedido) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PedidoRepository.cs:line 26
+   at AutoAtedimento.API.Services.PedidoService.CriarPedido(PedidoModel pedido) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PedidoService.cs:line 23
+   at AutoAtedimento.API.Controllers.PedidoController.CriarPedido(PedidoModel model) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PedidoController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 09:40:13 [Error] HTTP "POST" "/api/Pedido/criar" responded 500 in 1057.2994 ms
+2026-05-08 09:40:32 [Error] Erro capturado pelo ExceptionFilter
+System.InvalidOperationException: A conexão não foi fechada. O estado atual da conexão é aberta.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, SqlConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at AutoAtedimento.API.Repositories.PedidoRepository.CriarPedido(PedidoModel pedido) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PedidoRepository.cs:line 26
+   at AutoAtedimento.API.Services.PedidoService.CriarPedido(PedidoModel pedido) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PedidoService.cs:line 23
+   at AutoAtedimento.API.Controllers.PedidoController.CriarPedido(PedidoModel model) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PedidoController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 09:40:32 [Error] HTTP "POST" "/api/Pedido/criar" responded 500 in 258.4416 ms
+2026-05-08 09:41:06 [Error] Erro capturado pelo ExceptionFilter
+System.InvalidOperationException: A conexão não foi fechada. O estado atual da conexão é aberta.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, SqlConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at AutoAtedimento.API.Repositories.PedidoRepository.CriarPedido(PedidoModel pedido) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PedidoRepository.cs:line 26
+   at AutoAtedimento.API.Services.PedidoService.CriarPedido(PedidoModel pedido) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PedidoService.cs:line 23
+   at AutoAtedimento.API.Controllers.PedidoController.CriarPedido(PedidoModel model) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PedidoController.cs:line 24
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 09:41:06 [Error] HTTP "POST" "/api/Pedido/criar" responded 500 in 14731.0042 ms
+2026-05-08 09:42:24 [Information] HTTP "POST" "/api/Pedido/criar" responded 200 in 54101.9617 ms
+2026-05-08 09:42:49 [Information] HTTP "GET" "/api/Pedido/11" responded 200 in 29.8782 ms
+2026-05-08 09:43:21 [Information] HTTP "GET" "/api/Pedido/cozinha" responded 200 in 25.1746 ms
+2026-05-08 09:43:55 [Information] HTTP "PUT" "/api/Pedido/11/status" responded 200 in 42.3694 ms
+2026-05-08 09:44:07 [Information] HTTP "GET" "/api/Pedido/11" responded 200 in 5.8232 ms
+2026-05-08 09:44:18 [Information] HTTP "GET" "/api/Pedido/cozinha" responded 200 in 16.8190 ms
+2026-05-08 09:44:39 [Information] HTTP "PUT" "/api/Pedido/11/status" responded 200 in 10.3198 ms
+2026-05-08 09:44:45 [Information] HTTP "PUT" "/api/Pedido/11/finalizar" responded 200 in 12.6920 ms
+2026-05-08 09:54:07 [Information] HTTP "GET" "/api/Mesa/2/qrcode" responded 200 in 126.5340 ms
+2026-05-08 10:00:57 [Information] Aplicação iniciada
+2026-05-08 10:01:36 [Information] HTTP "PUT" "/api/mesa-sessao/1/fechar" responded 200 in 513.1041 ms
+2026-05-08 10:27:51 [Information] Aplicação iniciada
+2026-05-08 10:31:25 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Sessão já encerrada.
+   at AutoAtedimento.API.Repositories.PagamentoRepository.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PagamentoRepository.cs:line 39
+   at AutoAtedimento.API.Services.PagamentoService.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PagamentoService.cs:line 18
+   at AutoAtedimento.API.Controllers.PagamentoController.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PagamentoController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 10:31:25 [Information] HTTP "POST" "/api/pagamento/1/pix" responded 400 in 982.8906 ms
+2026-05-08 10:31:52 [Information] HTTP "POST" "/api/mesa-sessao/2/abrir" responded 200 in 51.7488 ms
+2026-05-08 10:33:11 [Information] HTTP "POST" "/api/Pedido/criar" responded 200 in 4827.7111 ms
+2026-05-08 10:33:43 [Information] HTTP "GET" "/api/Pedido/cozinha" responded 200 in 39.8266 ms
+2026-05-08 10:34:19 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Sessão sem valor para pagamento.
+   at AutoAtedimento.API.Repositories.PagamentoRepository.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PagamentoRepository.cs:line 71
+   at AutoAtedimento.API.Services.PagamentoService.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PagamentoService.cs:line 18
+   at AutoAtedimento.API.Controllers.PagamentoController.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PagamentoController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 10:34:19 [Information] HTTP "POST" "/api/pagamento/2/pix" responded 400 in 297.0592 ms
+2026-05-08 10:34:48 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Existem pedidos pendentes para esta sessão.
+   at AutoAtedimento.API.Repositories.MesaSessaoRepository.FecharSessao(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\MesaSessaoRepository.cs:line 95
+   at AutoAtedimento.API.Services.MesaSessaoService.FecharSessao(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\MesaSessaoService.cs:line 22
+   at AutoAtedimento.API.Controllers.MesaSessaoController.FecharSessao(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\MesaSessaoController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 10:34:48 [Information] HTTP "PUT" "/api/mesa-sessao/2/fechar" responded 400 in 326.3823 ms
+2026-05-08 10:35:05 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.NotFoundException: Pedido não encontrado.
+   at AutoAtedimento.API.Repositories.PedidoRepository.AtualizarStatus(Int32 pedidoId, StatusPedido status) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PedidoRepository.cs:line 210
+   at AutoAtedimento.API.Services.PedidoService.AtualizarStatus(Int32 pedidoId, StatusPedido status) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PedidoService.cs:line 39
+   at AutoAtedimento.API.Controllers.PedidoController.AtualizarStatus(Int32 id, AtualizarStatusModel status) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PedidoController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 10:35:05 [Information] HTTP "PUT" "/api/Pedido/2/status" responded 404 in 256.4025 ms
+2026-05-08 10:35:18 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: O pedido já está nesse status.
+   at AutoAtedimento.API.Repositories.PedidoRepository.AtualizarStatus(Int32 pedidoId, StatusPedido status) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PedidoRepository.cs:line 222
+   at AutoAtedimento.API.Services.PedidoService.AtualizarStatus(Int32 pedidoId, StatusPedido status) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PedidoService.cs:line 39
+   at AutoAtedimento.API.Controllers.PedidoController.AtualizarStatus(Int32 id, AtualizarStatusModel status) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PedidoController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 10:35:18 [Information] HTTP "PUT" "/api/Pedido/12/status" responded 400 in 278.9378 ms
+2026-05-08 10:35:27 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Não é permitido alterar de Recebido para 21.
+   at AutoAtedimento.API.Repositories.PedidoRepository.AtualizarStatus(Int32 pedidoId, StatusPedido status) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PedidoRepository.cs:line 227
+   at AutoAtedimento.API.Services.PedidoService.AtualizarStatus(Int32 pedidoId, StatusPedido status) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PedidoService.cs:line 39
+   at AutoAtedimento.API.Controllers.PedidoController.AtualizarStatus(Int32 id, AtualizarStatusModel status) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PedidoController.cs:line 46
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 10:35:27 [Information] HTTP "PUT" "/api/Pedido/12/status" responded 400 in 228.2415 ms
+2026-05-08 10:35:36 [Information] HTTP "PUT" "/api/Pedido/12/status" responded 200 in 20.6345 ms
+2026-05-08 10:35:41 [Information] HTTP "PUT" "/api/Pedido/12/status" responded 200 in 8.6740 ms
+2026-05-08 10:35:48 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Existem pedidos pendentes para esta sessão.
+   at AutoAtedimento.API.Repositories.MesaSessaoRepository.FecharSessao(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\MesaSessaoRepository.cs:line 95
+   at AutoAtedimento.API.Services.MesaSessaoService.FecharSessao(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\MesaSessaoService.cs:line 22
+   at AutoAtedimento.API.Controllers.MesaSessaoController.FecharSessao(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\MesaSessaoController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 10:35:48 [Information] HTTP "PUT" "/api/mesa-sessao/2/fechar" responded 400 in 304.0245 ms
+2026-05-08 10:36:17 [Information] HTTP "GET" "/api/Pedido/12" responded 200 in 20.8107 ms
+2026-05-08 10:37:05 [Information] HTTP "PUT" "/api/Pedido/12/status" responded 200 in 19.6037 ms
+2026-05-08 10:37:18 [Information] HTTP "POST" "/api/pagamento/2/pix" responded 200 in 45.8283 ms
+2026-05-08 10:40:11 [Information] HTTP "GET" "/api/Pedido/11" responded 200 in 43.0547 ms
+2026-05-08 10:40:33 [Information] HTTP "PUT" "/api/mesa-sessao/2/fechar" responded 200 in 15.3194 ms
+2026-05-08 10:40:41 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Sessão já encerrada.
+   at AutoAtedimento.API.Repositories.PagamentoRepository.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PagamentoRepository.cs:line 39
+   at AutoAtedimento.API.Services.PagamentoService.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PagamentoService.cs:line 18
+   at AutoAtedimento.API.Controllers.PagamentoController.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PagamentoController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 10:40:41 [Information] HTTP "POST" "/api/pagamento/2/pix" responded 400 in 236.0779 ms
+2026-05-08 10:53:52 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Sessão já encerrada.
+   at AutoAtedimento.API.Repositories.PagamentoRepository.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PagamentoRepository.cs:line 39
+   at AutoAtedimento.API.Services.PagamentoService.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PagamentoService.cs:line 18
+   at AutoAtedimento.API.Controllers.PagamentoController.GerarPix(Int32 sessaoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PagamentoController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 10:53:52 [Information] HTTP "POST" "/api/pagamento/2/pix" responded 400 in 271.8728 ms
+2026-05-08 11:16:05 [Information] Aplicação iniciada
+2026-05-08 11:16:32 [Information] HTTP "POST" "/api/mesa-sessao/4/abrir" responded 200 in 487.7745 ms
+2026-05-08 11:17:10 [Information] HTTP "POST" "/api/Pedido/criar" responded 200 in 151.9983 ms
+2026-05-08 11:17:32 [Information] HTTP "PUT" "/api/Pedido/13/status" responded 200 in 36.8175 ms
+2026-05-08 11:17:35 [Information] HTTP "PUT" "/api/Pedido/13/status" responded 200 in 19.5717 ms
+2026-05-08 11:18:37 [Information] HTTP "PUT" "/api/Pedido/13/status" responded 200 in 19.1203 ms
+2026-05-08 11:19:03 [Information] HTTP "POST" "/api/pagamento/3/pix" responded 200 in 54.7324 ms
+2026-05-08 11:19:42 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.NotFoundException: Pagamento não encontrado.
+   at AutoAtedimento.API.Repositories.PagamentoRepository.ConfirmarPagamento(Int32 pagamentoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Repositories\PagamentoRepository.cs:line 148
+   at AutoAtedimento.API.Services.PagamentoService.ConfirmarPagamento(Int32 pagamentoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\PagamentoService.cs:line 23
+   at AutoAtedimento.API.Controllers.PagamentoController.ConfirmarPagamento(Int32 pagamentoId) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\PagamentoController.cs:line 33
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-08 11:19:42 [Information] HTTP "PUT" "/api/pagamento/13/confirmar" responded 404 in 262.4231 ms
+2026-05-08 11:22:54 [Information] HTTP "PUT" "/api/pagamento/2/confirmar" responded 200 in 52.8226 ms
+2026-05-08 11:39:35 [Information] Aplicação iniciada
+2026-05-08 11:43:28 [Information] HTTP "POST" "/api/mesa-sessao/1/abrir" responded 200 in 449.2860 ms
+2026-05-08 11:43:42 [Information] HTTP "PUT" "/api/mesa-sessao/4/fechar" responded 200 in 103.9433 ms
