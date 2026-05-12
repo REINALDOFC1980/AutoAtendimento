@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Revise seus itens e finalize o pedido - Sabor da Casa">
+  <title>Carrinho | Sabor da Casa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="cart-page"></div>
+
+  <script src="js/cart.js"></script>
+  <script>
+    // ===== Utilidades =====
+    function formatPrice(value) {
+      return "R$ " + value.toFixed(2).replace(".", ",");
+    }
+
+    // ===== Renderizar Carrinho =====
+    function renderCartPage() {
+      const container = document.getElementById("cart-page");
+      const items = Cart.getItems();
+      const total = Cart.getTotal();
+      const count = Cart.getCount();
+
+      // Pedido finalizado
+      if (window._orderPlaced) {
+        container.innerHTML = `
+          <div class="order-success">
+            <div class="order-success__icon">✅</div>
+            <h1 class="order-success__title">Pedido Realizado!</h1>
+            <p class="order-success__text">Seu pedido foi enviado com sucesso.</p>
+            <a href="index.html" class="btn-primary-link">Voltar ao cardápio</a>
+          </div>
+        `;
+        return;
+      }
+
+      // Carrinho vazio
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div class="cart-empty">
+            <div class="cart-empty__icon">🛒</div>
+            <h1 class="cart-empty__title">Carrinho vazio</h1>
+            <p class="cart-empty__text">Adicione itens do cardápio para começar</p>
+            <a href="index.html" class="btn-primary-link">Ver cardápio</a>
+          </div>
+        `;
+        return;
+      }
+
+      // Carrinho com itens
+      container.innerHTML = `
+        <header class="cart-header">
+          <a href="index.html" class="cart-header__back">←</a>
+          <h1 class="cart-header__title">Carrinho (${count})</h1>
+        </header>
+
+        <div class="cart-items">
+          ${items.map(item => {
+            const extrasTotal = item.extras.reduce((s, e) => s + e.price * e.quantity, 0);
+            const itemTotal = (item.sizePrice + extrasTotal) * item.quantity;
+            return `
+              <div class="cart-item">
+                <div class="cart-item__top">
+                  <img src="${item.image}" alt="${item.name}" class="cart-item__img">
+                  <div class="cart-item__info">
+                    <div class="cart-item__name">${item.name}</div>
+                    <div class="cart-item__meta">${item.size}</div>
+                    ${item.extras.length > 0 ? `<div class="cart-item__meta">+ ${item.extras.map(e => e.quantity + "x " + e.name).join(", ")}</div>` : ""}
+                    ${item.observation ? `<div class="cart-item__obs">"${item.observation}"</div>` : ""}
+                  </div>
+                </div>
+                <div class="cart-item__bottom">
+                  <div class="cart-item__qty-controls">
+                    <button class="cart-qty-btn cart-qty-btn--minus" onclick="changeQty('${item.id}', -1)">−</button>
+                    <span class="cart-item__qty">${item.quantity}</span>
+                    <button class="cart-qty-btn cart-qty-btn--plus" onclick="changeQty('${item.id}', 1)">+</button>
+                  </div>
+                  <span class="cart-item__price">${formatPrice(itemTotal)}</span>
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+
+        <div class="cart-footer">
+          <div class="cart-footer__inner">
+            <div class="cart-footer__row">
+              <span class="cart-footer__label">Total</span>
+              <span class="cart-footer__total">${formatPrice(total)}</span>
+            </div>
+            <button class="btn-finalize" onclick="finalizarPedido()">Finalizar Pedido</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function changeQty(id, delta) {
+      Cart.updateQuantity(id, delta);
+      renderCartPage();
+    }
+
+    function finalizarPedido() {
+      Cart.clear();
+      window._orderPlaced = true;
+      renderCartPage();
+    }
+
+    // Inicializar
+    document.addEventListener("DOMContentLoaded", renderCartPage);
+  </script>
+</body>
+</html>

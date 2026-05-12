@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoAtendimento.WEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39bfce58633945caa9fbcdc8763f213ccdab6f8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoAtendimento.WEB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoAtendimento.WEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

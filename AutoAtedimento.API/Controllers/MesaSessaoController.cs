@@ -1,8 +1,10 @@
 ﻿using AutoAtedimento.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AutoAtedimento.API.Controllers
 {
+    [Authorize(Roles = "ADMIN")]
     [ApiController]
     [Route("api/mesa-sessao")]
     public class MesaSessaoController : ControllerBase

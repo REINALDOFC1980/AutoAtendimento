@@ -1,7 +1,64 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\controllers\\mesasessaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\controllers\\mesasessaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\controllers\\mesacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\controllers\\mesacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\dto\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\dto\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|e:\\laborat\u00F3rio\\autoatendimento\\autoatedimento.api\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF554080-BF8D-4156-B62D-7CC55EFA7A51}|AutoAtedimento.API\\AutoAtedimento.API.csproj|solutionrelative:autoatedimento.api\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +66,193 @@
       "DocumentGroups": [
         {
           "DockedWidth": 72,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\appsettings.json",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\appsettings.json",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\appsettings.json",
+              "RelativeToolTip": "AutoAtedimento.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-12T12:32:46.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\DTO\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\DTO\\LoginDTO.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\DTO\\LoginDTO.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\DTO\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:33:18.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginResponseDTO.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\DTO\\LoginResponseDTO.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\DTO\\LoginResponseDTO.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\DTO\\LoginResponseDTO.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\DTO\\LoginResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:33:37.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UsuarioModel.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Models\\UsuarioModel.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\Models\\UsuarioModel.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Models\\UsuarioModel.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\Models\\UsuarioModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:33:56.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Repositories\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\Repositories\\AuthRepository.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Repositories\\AuthRepository.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\Repositories\\AuthRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:34:17.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\Services\\JwtService.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Services\\JwtService.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:34:43.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\Services\\AuthService.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Services\\AuthService.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA7wB0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:36:46.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:37:35.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Program.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\Program.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Program.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\Program.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAANUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:38:12.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\Controllers\\ProdutoController.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\Controllers\\ProdutoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:47:42.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriaController.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\CategoriaController.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\Controllers\\CategoriaController.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\CategoriaController.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\Controllers\\CategoriaController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:56:34.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\Controllers\\PedidoController.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\PedidoController.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\Controllers\\PedidoController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:57:06.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MesaController.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\MesaController.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\Controllers\\MesaController.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\MesaController.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\Controllers\\MesaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:57:24.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MesaSessaoController.cs",
+              "DocumentMoniker": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\MesaSessaoController.cs",
+              "RelativeDocumentMoniker": "AutoAtedimento.API\\Controllers\\MesaSessaoController.cs",
+              "ToolTip": "E:\\LABORAT\u00D3RIO\\AutoAtendimento\\AutoAtedimento.API\\Controllers\\MesaSessaoController.cs",
+              "RelativeToolTip": "AutoAtedimento.API\\Controllers\\MesaSessaoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:57:41.515Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,4 +1,5 @@
-﻿using AutoAtedimento.API.Services;
+﻿using AutoAtedimento.API.DTO;
+using AutoAtedimento.API.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AutoAtedimento.API.Controllers
@@ -37,6 +38,14 @@ namespace AutoAtedimento.API.Controllers
                 sucesso = true,
                 mensagem = "Pagamento confirmado com sucesso."
             });
+        }
+
+        [HttpPost("webhook")]
+        public async Task<IActionResult> Webhook([FromBody] PagamentoWebhookDTO webhook)
+        {
+            await _service.ProcessarWebhook(webhook);
+
+            return Ok();
         }
     }
 }

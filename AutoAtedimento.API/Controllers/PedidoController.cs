@@ -1,9 +1,11 @@
 ﻿using AutoAtedimento.API.Models;
 using AutoAtedimento.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AutoAtedimento.API.Controllers
 {
+
     [ApiController]
     [Route("api/[controller]")]
     public class PedidoController : ControllerBase
@@ -26,6 +28,7 @@ namespace AutoAtedimento.API.Controllers
             return Ok(new { sucesso = true, pedidoId });
         }
 
+        [Authorize(Roles = "ADMIN")]
         [HttpGet("cozinha")]
         public async Task<IActionResult> ListarCozinha()
         {
@@ -50,7 +53,7 @@ namespace AutoAtedimento.API.Controllers
                 sucesso = true,
                 mensagem = "Status atualizado com sucesso"
             });
-        }      
+        }
 
         [HttpPut("{id}/finalizar")]
         public async Task<IActionResult> Finalizar(int id)

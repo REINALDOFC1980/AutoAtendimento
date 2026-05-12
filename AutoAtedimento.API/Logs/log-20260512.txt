@@ -1,0 +1,11 @@
+2026-05-12 08:15:50 [Information] Aplicação iniciada
+2026-05-12 08:55:28 [Information] Aplicação iniciada
+2026-05-12 09:12:58 [Information] Aplicação iniciada
+2026-05-12 09:15:46 [Information] Aplicação iniciada
+2026-05-12 09:46:48 [Information] Aplicação iniciada
+2026-05-12 09:48:04 [Information] Aplicação iniciada
+2026-05-12 09:49:22 [Information] Aplicação iniciada
+2026-05-12 09:52:21 [Information] Aplicação iniciada
+2026-05-12 09:52:33 [Information] HTTP "POST" "/api/Auth/login" responded 200 in 1221.4301 ms
+2026-05-12 09:54:19 [Information] HTTP "POST" "/api/Produto" responded 401 in 22.0134 ms
+2026-05-12 09:54:55 [Information] HTTP "POST" "/api/Produto" responded 200 in 139.1843 ms

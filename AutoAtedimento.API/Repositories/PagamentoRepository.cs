@@ -17,116 +17,6 @@ namespace AutoAtedimento.API.Repositories
             _db = db;
         }
 
-        public async Task<PagamentoDTO> GerarPix(int sessaoId)
-        {
-            using var connection = _db.CreateConnection();
-
-            // 🔥 VALIDAR SESSÃO
-            var sessao = await connection.QueryFirstOrDefaultAsync<dynamic>(
-                @"
-                SELECT
-                    Ses_Id,
-                    Ses_Status
-                FROM MesaSessao
-                WHERE Ses_Id = @SessaoId
-                ",
-                new { SessaoId = sessaoId });
-
-            if (sessao == null)
-                throw new NotFoundException("Sessão não encontrada.");
-
-            if (sessao.Ses_Status != 1)
-                throw new BusinessException("Sessão já encerrada.");
-
-            // 🔥 VALIDAR PAGAMENTO PENDENTE
-            var pagamentoPendente =
-                await connection.ExecuteScalarAsync<int>(
-                    @"
-                    SELECT COUNT(1)
-                    FROM Pagamento
-                    WHERE Pag_SessaoId = @SessaoId
-                    AND Pag_Status = 1
-                    ",
-                    new { SessaoId = sessaoId });
-
-            if (pagamentoPendente > 0)
-                throw new BusinessException(
-                    "Já existe pagamento pendente para esta sessão.");
-
-            // 🔥 CALCULAR TOTAL
-            var total = await connection.ExecuteScalarAsync<decimal>(
-                @"
-                SELECT ISNULL(SUM(
-                    i.It_Quantidade * i.It_PrecoUnitario
-                ),0)
-                FROM PedidoItem i
-                INNER JOIN Pedido p
-                    ON p.Ped_Id = i.It_PedidoId
-                WHERE p.Ped_SessaoId = @SessaoId
-                AND p.Ped_Status = 4
-                ",
-                new { SessaoId = sessaoId });
-
-            if (total <= 0)
-                throw new BusinessException(
-                    "Sessão sem valor para pagamento.");
-
-            // 🔥 MOCK PIX
-            var txid = Guid.NewGuid().ToString("N");
-
-            var copiaECola =
-                $"PIX-MOCK-{txid}";
-
-            var qrCode =
-                $"https://api.qrserver.com/v1/create-qr-code/?size=300x300&data={copiaECola}";
-
-            // 🔥 INSERT PAGAMENTO
-            var pagamentoId = await connection.ExecuteScalarAsync<int>(
-                @"
-                INSERT INTO Pagamento
-                (
-                    Pag_SessaoId,
-                    Pag_Valor,
-                    Pag_Status,
-                    Pag_TXID,
-                    Pag_QrCode,
-                    Pag_CopiaECola
-                )
-                VALUES
-                (
-                    @SessaoId,
-                    @Valor,
-                    @Status,
-                    @TXID,
-                    @QrCode,
-                    @CopiaECola
-                );
-
-                SELECT CAST(SCOPE_IDENTITY() AS INT);
-                ",
-                new
-                {
-                    SessaoId = sessaoId,
-                    Valor = total,
-                    Status = (int)StatusPagamento.Pendente,
-                    TXID = txid,
-                    QrCode = qrCode,
-                    CopiaECola = copiaECola
-                });
-
-            return new PagamentoDTO
-            {
-                PagamentoId = pagamentoId,
-                SessaoId = sessaoId,
-                Valor = total,
-                Status = (int)StatusPagamento.Pendente,
-                TXID = txid,
-                QrCode = qrCode,
-                CopiaECola = copiaECola,
-                DataCriacao = DateTime.Now
-            };
-        }
-
 
         public async Task ConfirmarPagamento(int pagamentoId)
         {
@@ -192,6 +82,145 @@ namespace AutoAtedimento.API.Repositories
                 {
                     SessaoId = pagamento.Pag_SessaoId
                 });
+        }
+
+
+        public async Task<PagamentoDTO> ObterDadosPagamento(int sessaoId)
+        {
+            using var connection = _db.CreateConnection();
+
+            // 🔥 VALIDAR SESSÃO
+            var sessao = await connection.QueryFirstOrDefaultAsync<dynamic>(
+                @"
+                SELECT
+                    Ses_Id,
+                    Ses_Status
+                FROM MesaSessao
+                WHERE Ses_Id = @SessaoId
+                ",
+                new { SessaoId = sessaoId });
+
+            if (sessao == null)
+                throw new NotFoundException("Sessão não encontrada.");
+
+            if (sessao.Ses_Status != 1)
+                throw new BusinessException("Sessão encerrada.");
+
+            // 🔥 VALIDAR PAGAMENTO PENDENTE
+            var pagamentoExistente =
+                await connection.QueryFirstOrDefaultAsync<int?>(
+                    @"
+                    SELECT Pag_Id
+                    FROM Pagamento
+                    WHERE Pag_SessaoId = @SessaoId
+                    AND Pag_Status = 1
+                    ",
+                    new { SessaoId = sessaoId });
+
+            if (pagamentoExistente.HasValue)
+                throw new BusinessException(
+                    "Já existe pagamento pendente.");
+
+            // 🔥 CALCULAR TOTAL
+            var total = await connection.ExecuteScalarAsync<decimal>(
+                @"
+                SELECT ISNULL(SUM(
+                    i.It_Quantidade * i.It_PrecoUnitario
+                ),0)
+                FROM PedidoItem i
+                INNER JOIN Pedido p
+                    ON p.Ped_Id = i.It_PedidoId
+                WHERE p.Ped_SessaoId = @SessaoId
+                AND p.Ped_Status = 4
+                ",
+                new { SessaoId = sessaoId });
+
+            if (total <= 0)
+                throw new BusinessException(
+                    "Sessão sem pedidos finalizados.");
+
+            // 🔥 CRIAR REGISTRO PAGAMENTO
+            var pagamentoId = await connection.ExecuteScalarAsync<int>(
+                @"
+                INSERT INTO Pagamento
+                (
+                    Pag_SessaoId,
+                    Pag_Valor,
+                    Pag_Status
+                )
+                VALUES
+                (
+                    @SessaoId,
+                    @Valor,
+                    1
+                );
+
+                SELECT CAST(SCOPE_IDENTITY() AS INT);
+                ",
+                new
+                {
+                    SessaoId = sessaoId,
+                    Valor = total
+                });
+
+            return new PagamentoDTO
+            {
+                PagamentoId = pagamentoId,
+                SessaoId = sessaoId,
+                Valor = total,
+                Status = 1
+            };
+        }
+
+
+        public async Task SalvarPix(
+     int pagamentoId,
+     PixPagamentoDTO pix)
+        {
+            using var connection = _db.CreateConnection();
+
+            await connection.ExecuteAsync(
+                @"
+                UPDATE Pagamento
+                SET
+                    Pag_TXID = @TXID,
+                    Pag_QrCode = @QrCode,
+                    Pag_CopiaECola = @CopiaECola,
+                    Pag_MercadoPagoId = @MercadoPagoId
+                WHERE Pag_Id = @PagamentoId
+                ",
+                new
+                {
+                    PagamentoId = pagamentoId,
+                    TXID = pix.TXID,
+                    QrCode = pix.QrCode,
+                    CopiaECola = pix.CopiaECola,
+                    MercadoPagoId = pix.MercadoPagoId
+                });
+        }
+
+        public async Task<PagamentoDTO?> ObterPorMercadoPagoId(string mercadoPagoId)
+        {
+            using var connection = _db.CreateConnection();
+
+            var sql = @"
+                    SELECT
+                        Pag_Id AS PagamentoId,
+                        Pag_SessaoId AS SessaoId,
+                        Pag_Valor AS Valor,
+                        Pag_Status AS Status,
+                        Pag_TXID AS TXID,
+                        Pag_MercadoPagoId AS MercadoPagoId
+                    FROM Pagamento
+                    WHERE Pag_MercadoPagoId = @MercadoPagoId
+                ";
+
+            return await connection.QueryFirstOrDefaultAsync<PagamentoDTO>(
+                sql,
+            new
+            {
+                MercadoPagoId = mercadoPagoId
+            });
         }
     }
 }

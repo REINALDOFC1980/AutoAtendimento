@@ -1,7 +1,6 @@
 ﻿namespace AutoAtedimento.API.DTO
 {
-    namespace AutoAtedimento.API.DTO
-    {
+
         public class PagamentoDTO
         {
             public int PagamentoId { get; set; }
@@ -14,5 +13,5 @@
             public DateTime DataCriacao { get; set; }
             public DateTime? DataPagamento { get; set; }
         }
-    }
+    
 }

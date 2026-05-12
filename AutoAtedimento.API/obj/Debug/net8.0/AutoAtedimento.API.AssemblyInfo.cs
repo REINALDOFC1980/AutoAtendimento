@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoAtedimento.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f0b4a6975c741868cb2f69803683f2e3b42939f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39bfce58633945caa9fbcdc8763f213ccdab6f8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoAtedimento.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoAtedimento.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

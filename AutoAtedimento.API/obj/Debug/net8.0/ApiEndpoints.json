@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "AutoAtedimento.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "AutoAtedimento.API.DTO.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AutoAtedimento.API.Controllers.CategoriaController",
     "Method": "Listar",
     "RelativePath": "api/Categoria",
@@ -195,6 +211,22 @@
       {
         "Name": "sessaoId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AutoAtedimento.API.Controllers.PagamentoController",
+    "Method": "Webhook",
+    "RelativePath": "api/pagamento/webhook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "webhook",
+        "Type": "AutoAtedimento.API.DTO.PagamentoWebhookDTO",
         "IsRequired": true
       }
     ],

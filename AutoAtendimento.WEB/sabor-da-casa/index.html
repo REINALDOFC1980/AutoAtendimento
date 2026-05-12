@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sabor da Casa - Peça seus pratos favoritos online com praticidade">
+  <title>Sabor da Casa | Cardápio Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__title">🍴 Sabor da Casa</h1>
+      <p class="header__subtitle">O melhor da culinária brasileira</p>
+    </div>
+  </header>
+
+  <!-- Category Bar -->
+  <nav class="category-bar">
+    <div class="category-bar__inner" id="category-bar"></div>
+  </nav>
+
+  <!-- Menu -->
+  <main class="main" id="menu"></main>
+
+  <!-- Cart Bar -->
+  <div class="cart-bar" id="cart-bar">
+    <a href="carrinho.html" class="cart-bar__inner">
+      <div class="cart-bar__left">
+        <span class="cart-bar__badge" id="cart-count">0</span>
+        <span class="cart-bar__label">Ver carrinho</span>
+      </div>
+      <span class="cart-bar__total" id="cart-total">R$ 0,00</span>
+    </a>
+  </div>
+
+  <!-- Modal Overlay -->
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal" id="modal-content"></div>
+  </div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

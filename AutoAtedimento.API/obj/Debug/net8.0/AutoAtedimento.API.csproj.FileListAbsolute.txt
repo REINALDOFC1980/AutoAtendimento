@@ -119,3 +119,6 @@ E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\obj\Debug\net8.0\refint\AutoA
 E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\obj\Debug\net8.0\AutoAtedimento.API.pdb
 E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\obj\Debug\net8.0\AutoAtedimento.API.genruntimeconfig.cache
 E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\obj\Debug\net8.0\ref\AutoAtedimento.API.dll
+E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\bin\Debug\net8.0\MercadoPago.dll
+E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,10 +1,12 @@
 ﻿using AutoAtedimento.API.Models;
 using AutoAtedimento.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QRCoder;
 
 namespace AutoAtedimento.API.Controllers
 {
+    [Authorize(Roles = "ADMIN")]
     [ApiController]
     [Route("api/[controller]")]
     public class MesaController : ControllerBase
