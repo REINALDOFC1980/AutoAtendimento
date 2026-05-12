@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "y/XJ7ETVLok=",
+  "dgSpecHash": "wcuidiCmNHY=",
   "success": true,
   "projectFilePath": "E:\\LABORATÓRIO\\AutoAtendimento\\AutoAtedimento.API\\AutoAtedimento.API.csproj",
   "expectedPackageFiles": [
+    "E:\\NugetCache\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "E:\\NugetCache\\dapper\\2.1.72\\dapper.2.1.72.nupkg.sha512",
     "E:\\NugetCache\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "E:\\NugetCache\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",

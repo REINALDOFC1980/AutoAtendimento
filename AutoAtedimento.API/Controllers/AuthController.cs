@@ -22,5 +22,13 @@ namespace AutoAtedimento.API.Controllers
 
             return Ok(result);
         }
+
+        [HttpPost("refresh")]
+        public async Task<IActionResult> Refresh([FromBody] RefreshTokenDTO dto)
+        {
+            var result = await _service.RefreshToken(dto.RefreshToken!);
+
+            return Ok(result);
+        }
     }
 }

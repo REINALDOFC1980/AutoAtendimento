@@ -122,3 +122,4 @@ E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\obj\Debug\net8.0\ref\AutoAted
 E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\bin\Debug\net8.0\MercadoPago.dll
 E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\bin\Debug\net8.0\Newtonsoft.Json.dll
 E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\bin\Debug\net8.0\BCrypt-Net-Next.dll

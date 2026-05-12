@@ -29,7 +29,7 @@ namespace AutoAtedimento.API.Services
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.UtcNow.AddHours(8),
+                Expires = DateTime.UtcNow.AddMinutes(2),
                 Issuer = _configuration["Jwt:Issuer"],
                 Audience = _configuration["Jwt:Audience"],
                 SigningCredentials =
@@ -41,6 +41,12 @@ namespace AutoAtedimento.API.Services
             var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
+        }
+
+        public string GerarRefreshToken()
+        {
+            return Guid.NewGuid().ToString()
+                + Guid.NewGuid().ToString();
         }
     }
 }

@@ -9,3 +9,30 @@
 2026-05-12 09:52:33 [Information] HTTP "POST" "/api/Auth/login" responded 200 in 1221.4301 ms
 2026-05-12 09:54:19 [Information] HTTP "POST" "/api/Produto" responded 401 in 22.0134 ms
 2026-05-12 09:54:55 [Information] HTTP "POST" "/api/Produto" responded 200 in 139.1843 ms
+2026-05-12 10:04:44 [Information] Aplicação iniciada
+2026-05-12 10:04:55 [Information] HTTP "GET" "/api/Teste/hash" responded 200 in 439.8502 ms
+2026-05-12 10:08:06 [Information] Aplicação iniciada
+2026-05-12 10:08:24 [Information] HTTP "POST" "/api/Auth/login" responded 200 in 993.1719 ms
+2026-05-12 10:08:29 [Error] Erro capturado pelo ExceptionFilter
+AutoAtedimento.API.Exceptions.BusinessException: Usuário ou senha inválidos.
+   at AutoAtedimento.API.Services.AuthService.Login(LoginDTO dto) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Services\AuthService.cs:line 32
+   at AutoAtedimento.API.Controllers.AuthController.Login(LoginDTO dto) in E:\LABORATÓRIO\AutoAtendimento\AutoAtedimento.API\Controllers\AuthController.cs:line 21
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+2026-05-12 10:08:29 [Information] HTTP "POST" "/api/Auth/login" responded 400 in 529.9134 ms
+2026-05-12 10:10:13 [Information] Aplicação iniciada
+2026-05-12 10:11:23 [Information] HTTP "POST" "/api/Auth/login" responded 200 in 59006.4199 ms
+2026-05-12 10:11:52 [Information] HTTP "GET" "/api/Produto" responded 401 in 19.6550 ms
+2026-05-12 10:12:06 [Information] HTTP "GET" "/api/Produto" responded 200 in 81.5011 ms
+2026-05-12 10:25:03 [Information] Aplicação iniciada
+2026-05-12 10:25:24 [Information] HTTP "POST" "/api/Auth/login" responded 200 in 995.1961 ms
+2026-05-12 10:25:40 [Information] HTTP "POST" "/api/Auth/refresh" responded 200 in 169.2931 ms
+2026-05-12 10:26:39 [Information] Aplicação iniciada
+2026-05-12 10:26:54 [Information] HTTP "POST" "/api/Auth/login" responded 200 in 985.5398 ms
+2026-05-12 10:27:48 [Information] HTTP "GET" "/api/Pedido/cozinha" responded 200 in 90.2005 ms
+2026-05-12 10:28:52 [Information] HTTP "GET" "/api/Pedido/cozinha" responded 200 in 20.5678 ms
